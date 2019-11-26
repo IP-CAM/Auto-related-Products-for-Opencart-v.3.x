@@ -132,6 +132,11 @@
             // oct_product_auto_related
             $product_data_related = $this->cache->get('octemplates.oct_product_auto_related.product.' . (int) $this->config->get('config_store_id') . '.' . (int) $this->config->get('config_customer_group_id') . '.' . (int) $this->request->get['product_id'] . '.' . (int)$this->config->get('config_language_id'));
 
+            // oct_stickers
+            $oct_product_stickers = [];
+			$data['sticker_colors'] = [];
+			// END oct_stickers
+
             $data['oct_rel_view'] = false;
 
             if ($product_data_related) {
